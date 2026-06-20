@@ -1,0 +1,26 @@
+name: market-check
+
+on:
+  schedule:
+    - cron: "0 22 * * *"  # 日本時間朝7時（UTC 22時）
+  workflow_dispatch:
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: install dependencies
+        run: |
+          pip install yfinance pandas numpy requests
+
+      - name: run script
+        run: python market_check.py
