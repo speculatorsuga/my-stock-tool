@@ -2,7 +2,7 @@ name: market-check
 
 on:
   schedule:
-    - cron: "0 22 * * *"  # 日本時間朝7時（UTC 22時）
+    - cron: "30 21 * * *"  # UTC 21:30 = 日本時間 翌朝6:30（遅延考慮で7時頃届く）
   workflow_dispatch:
 
 jobs:
