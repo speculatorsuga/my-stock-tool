@@ -34,11 +34,11 @@ usdjpy_price = get_price("JPY=X")
 # ===== 日本株セクター（全銘柄コード確認済み） =====
 sectors = {
     "半導体・AI・電子部品": {
-        "キオクシアHD":       "285A.T",   # 時価総額2位
-        "東京エレクトロン":   "8035.T",   # 時価総額5位
-        "アドバンテスト":     "6857.T",   # 時価総額10位
-        "村田製作所":         "6981.T",   # 時価総額11位
-        "キーエンス":         "6861.T",   # 時価総額12位
+        "キオクシアHD":       "285A.T",
+        "東京エレクトロン":   "8035.T",
+        "アドバンテスト":     "6857.T",
+        "村田製作所":         "6981.T",
+        "キーエンス":         "6861.T",
         "ルネサス":           "6723.T",
         "レーザーテック":     "6920.T",
         "ディスコ":           "6146.T",
@@ -46,10 +46,10 @@ sectors = {
         "太陽誘電":           "6976.T",
     },
     "テック・DX・通信": {
-        "ソフトバンクG":         "9984.T",   # 時価総額3位
-        "日立製作所":           "6501.T",   # 時価総額7位
-        "リクルートHD":         "6098.T",   # 時価総額15位
-        "ソニーグループ":       "6758.T",   # 時価総額9位
+        "ソフトバンクG":         "9984.T",
+        "日立製作所":           "6501.T",
+        "リクルートHD":         "6098.T",
+        "ソニーグループ":       "6758.T",
         "NTT":                  "9432.T",
         "NEC":                  "6701.T",
         "富士通":               "6702.T",
@@ -58,46 +58,46 @@ sectors = {
         "オービック":           "4684.T",
     },
     "電線・非鉄金属": {
-        "フジクラ":         "5803.T",
-        "古河電気工業":     "5801.T",
-        "住友電気工業":     "5802.T",
-        "JX金属":           "5016.T",
-        "住友金属鉱山":     "5713.T",
+        "フジクラ":       "5803.T",
+        "古河電気工業":   "5801.T",
+        "住友電気工業":   "5802.T",
+        "JX金属":         "5016.T",
+        "住友金属鉱山":   "5713.T",
     },
     "素材・化学": {
-        "信越化学工業":   "4063.T",   # 時価総額17位
-        "レゾナック":     "4004.T",
-        "住友化学":       "4005.T",
-        "三菱ケミカルG":  "4188.T",
-        "旭化成":         "3407.T",
+        "信越化学工業":  "4063.T",
+        "レゾナック":    "4004.T",
+        "住友化学":      "4005.T",
+        "三菱ケミカルG": "4188.T",
+        "旭化成":        "3407.T",
     },
     "鉄鋼": {
-        "日本製鉄":             "5401.T",
-        "JFEホールディングス":  "5411.T",
-        "神戸製鋼所":           "5406.T",
+        "日本製鉄":            "5401.T",
+        "JFEホールディングス": "5411.T",
+        "神戸製鋼所":          "5406.T",
     },
     "銀行・金融": {
-        "三菱UFJ":          "8306.T",   # 時価総額4位
-        "三井住友FG":        "8316.T",   # 時価総額8位
-        "みずほFG":          "8411.T",   # 時価総額13位
-        "三井住友トラスト":  "8309.T",
-        "りそなHD":          "8308.T",
+        "三菱UFJ":         "8306.T",
+        "三井住友FG":      "8316.T",
+        "みずほFG":        "8411.T",
+        "三井住友トラスト": "8309.T",
+        "りそなHD":        "8308.T",
     },
     "保険": {
-        "東京海上HD":              "8766.T",   # 時価総額19位
-        "MS&ADインシュアランス":  "8725.T",
-        "SOMPOホールディングス":  "8630.T",
-        "第一生命HD":              "8750.T",
+        "東京海上HD":             "8766.T",
+        "MS&ADインシュアランス": "8725.T",
+        "SOMPOホールディングス": "8630.T",
+        "第一生命HD":             "8750.T",
     },
     "商社": {
-        "三菱商事":   "8058.T",   # 時価総額14位
-        "伊藤忠商事": "8001.T",   # 時価総額16位
-        "三井物産":   "8031.T",   # 時価総額18位
+        "三菱商事":   "8058.T",
+        "伊藤忠商事": "8001.T",
+        "三井物産":   "8031.T",
         "住友商事":   "8053.T",
         "丸紅":       "8002.T",
     },
     "自動車・輸送機器": {
-        "トヨタ":   "7203.T",   # 時価総額1位
+        "トヨタ":   "7203.T",
         "ホンダ":   "7267.T",
         "デンソー": "6902.T",
         "アイシン": "7259.T",
@@ -118,7 +118,7 @@ sectors = {
         "テラドローン": "278A.T",
     },
     "小売・消費": {
-        "ファーストリテイリング": "9983.T",   # 時価総額6位
+        "ファーストリテイリング": "9983.T",
         "セブン＆アイ":           "3382.T",
         "イオン":                 "8267.T",
         "ニトリ":                 "9843.T",
@@ -170,9 +170,9 @@ sorted_sectors = sorted(sector_avg.items(), key=lambda x: x[1], reverse=True)
 hot_sector  = sorted_sectors[0][0]  if sorted_sectors else "不明"
 cold_sector = sorted_sectors[-1][0] if sorted_sectors else "不明"
 
-sorted_stocks  = sorted(all_stocks, key=lambda x: x[1], reverse=True)
-top_stocks     = sorted_stocks[:10]
-bottom_stocks  = sorted_stocks[-5:]
+sorted_stocks = sorted(all_stocks, key=lambda x: x[1], reverse=True)
+top_stocks    = sorted_stocks[:10]
+bottom_stocks = sorted_stocks[-5:]
 
 # ===== 米国連動分析 =====
 def us_jp_correlation(spy, qqq, vix, usdjpy):
@@ -308,7 +308,8 @@ for sector_name, stocks in sector_results.items():
         reverse=True
     )
     for name, change in sorted_s:
-        body += f"    {fmt(change):>14}  {name}\n"
+        code = sectors[sector_name].get(name, "")
+        body += f"    {fmt(change):>14}  {name}（{code}）\n"
 
 body += """
 ━━━━━━━━━━━━━━━━━━━━
@@ -316,7 +317,8 @@ body += """
 ━━━━━━━━━━━━━━━━━━━━
 """
 for i, (name, change, sector) in enumerate(top_stocks, 1):
-    body += f"  {i:2}. {name}（{sector}）: +{change:.2f}%\n"
+    code = sectors[sector].get(name, "")
+    body += f"  {i:2}. {name}（{code}）: +{change:.2f}%\n"
 
 body += """
 ━━━━━━━━━━━━━━━━━━━━
@@ -324,7 +326,8 @@ body += """
 ━━━━━━━━━━━━━━━━━━━━
 """
 for name, change, sector in reversed(bottom_stocks):
-    body += f"  ▼ {name}（{sector}）: {change:.2f}%\n"
+    code = sectors[sector].get(name, "")
+    body += f"  ▼ {name}（{code}）: {change:.2f}%\n"
 
 body += f"""
 ━━━━━━━━━━━━━━━━━━━━
@@ -338,7 +341,8 @@ body += "\n【今日の注目銘柄候補（予測セクターより）】\n"
 shown = 0
 for name, change, sector in sorted_stocks:
     if any(sector in ps for ps in predicted_sectors) and shown < 8:
-        body += f"  ★ {name}（{sector}）前日 +{change:.2f}%\n"
+        code = sectors[sector].get(name, "")
+        body += f"  ★ {name}（{code}）前日 +{change:.2f}%\n"
         shown += 1
 
 body += """
